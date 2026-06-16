@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Фото тренера</title>
+  <desc id="desc">Нейтральний SVG-плейсхолдер для фото тренера.</desc>
+  <rect width="720" height="520" rx="34" fill="#eef6ec"/>
+  <circle cx="132" cy="405" r="102" fill="#f8e8eb"/>
+  <circle cx="610" cy="108" r="84" fill="#ffffff" opacity=".8"/>
+  <path d="M0 392c88-40 169-45 243-16 92 36 172 37 257 2 74-31 147-25 220 18v124H0Z" fill="#ffffff"/>
+  <circle cx="360" cy="193" r="72" fill="#086233"/>
+  <path d="M220 405c15-82 72-134 140-134s125 52 140 134c-31 29-78 46-140 46s-109-17-140-46Z" fill="#9f182b"/>
+  <path d="M315 338h90" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+locale: uk
+media_folder: "project/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news"
+    label: "Новини"
+    label_singular: "Новина"
+    folder: "project/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields:
+      - "date"
+      - "title"
+    view_filters:
+      - label: "Опубліковані"
+        field: "draft"
+        pattern: false
+    fields:
+      - label: "Заголовок"
+        name: "title"
+        widget: "string"
+      - label: "Дата"
+        name: "date"
+        widget: "datetime"
+        date_format: "DD.MM.YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: "Категорія"
+        name: "category"
+        widget: "string"
+        default: "Новини клубу"
+      - label: "Фото"
+        name: "image"
+        widget: "image"
+      - label: "Короткий опис"
+        name: "description"
+        widget: "text"
+        required: false
+      - label: "Текст новини"
+        name: "body"
+        widget: "markdown"
+        buttons:
+          - "bold"
+          - "italic"
+          - "link"
+          - "bulleted-list"
+          - "numbered-list"
+        editor_components:
+          - "image"

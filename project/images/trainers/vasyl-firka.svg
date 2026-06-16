@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Фото тренера Василя Фірки</title>
+  <desc id="desc">Нейтральний SVG-плейсхолдер для фото тренера.</desc>
+  <rect width="720" height="520" rx="34" fill="#f8e8eb"/>
+  <rect x="48" y="48" width="624" height="424" rx="30" fill="#ffffff" opacity=".72"/>
+  <path d="M48 347c70-39 139-46 207-19 75 30 145 28 210-5 64-32 132-25 207 20v129H48Z" fill="#eef6ec"/>
+  <circle cx="360" cy="188" r="73" fill="#9f182b"/>
+  <path d="M220 405c14-83 72-135 140-135s126 52 140 135c-33 29-79 46-140 46s-107-17-140-46Z" fill="#086233"/>
+  <path d="M292 338h136" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+</svg>

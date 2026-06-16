@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <rect width="700" height="460" fill="#111c15"/>
+  <path d="M156 108 254 72l98 34 110-18 92 82-20 114-96 74-132 30-116-36-54-112z" fill="#1b8f4c"/>
+  <path d="M198 144 258 126l78 24 92-14 64 54-12 70-64 54-104 24-84-24-38-78z" fill="#d8f1de" opacity=".35"/>
+  <g fill="#fff">
+    <circle cx="240" cy="190" r="8"/>
+    <circle cx="314" cy="236" r="8"/>
+    <circle cx="380" cy="204" r="8"/>
+    <circle cx="442" cy="246" r="8"/>
+    <circle cx="286" cy="292" r="8"/>
+  </g>
+  <g fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    <text x="92" y="66">Закарпаття</text>
+    <text x="258" y="186">Ужгород</text>
+    <text x="330" y="286">Мукачево</text>
+  </g>
+</svg>

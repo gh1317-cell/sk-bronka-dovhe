@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Фото тренера В'ячеслава Шусти</title>
+  <desc id="desc">Нейтральний SVG-плейсхолдер для фото тренера.</desc>
+  <rect width="720" height="520" rx="34" fill="#f4f7f2"/>
+  <circle cx="120" cy="95" r="72" fill="#f8e8eb"/>
+  <circle cx="600" cy="430" r="110" fill="#e6f2e5"/>
+  <path d="M0 390c92-48 178-58 258-30 93 33 173 35 260 2 74-28 139-25 202 9v149H0Z" fill="#ffffff"/>
+  <circle cx="360" cy="195" r="72" fill="#9f182b"/>
+  <path d="M220 405c14-84 72-137 140-137s126 53 140 137c-31 29-78 47-140 47s-109-18-140-47Z" fill="#0d8f44"/>
+  <path d="M305 343h110" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+</svg>

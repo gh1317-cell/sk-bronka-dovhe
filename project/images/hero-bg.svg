@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#edf7ef"/>
+      <stop offset="100%" stop-color="#a8d9b1"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1ba456"/>
+      <stop offset="100%" stop-color="#0a6f37"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1180" cy="180" r="92" fill="#fff" opacity=".55"/>
+  <rect y="420" width="1600" height="480" fill="url(#field)"/>
+  <path d="M0 600 C260 540 360 700 580 635 S1040 560 1240 640 S1490 720 1600 665 V900 H0Z" fill="#0c7f3f"/>
+  <path d="M0 690 C280 620 450 760 690 705 S1100 640 1340 720 S1520 790 1600 760 V900 H0Z" fill="#095e30" opacity=".9"/>
+  <g fill="none" stroke="#f6fff8" stroke-width="6" opacity=".88">
+    <rect x="980" y="500" width="420" height="230" rx="10"/>
+    <rect x="1160" y="560" width="160" height="90" rx="8"/>
+    <circle cx="1190" cy="615" r="64"/>
+    <path d="M980 615H1400"/>
+  </g>
+  <g transform="translate(250 310)">
+    <ellipse cx="0" cy="270" rx="145" ry="26" fill="#16301f" opacity=".16"/>
+    <circle cx="18" cy="42" r="42" fill="#13281a"/>
+    <path d="M0 86 L52 210 L-24 208 Z" fill="#102114"/>
+    <path d="M30 98 L108 162 L72 192 L4 134 Z" fill="#173a23"/>
+    <path d="M-8 114 L-80 168 L-56 200 L14 152 Z" fill="#184026"/>
+    <path d="M18 208 L40 312 L0 314 L-6 214 Z" fill="#ffffff"/>
+    <path d="M58 198 L92 298 L54 304 L24 222 Z" fill="#0f8b43"/>
+    <path d="M-8 208 L-48 306 L-90 300 L-28 204 Z" fill="#0f8b43"/>
+    <circle cx="112" cy="188" r="20" fill="#f9fbf8"/>
+    <path d="M101 178h22v20h-22z" fill="#102114"/>
+  </g>
+  <text x="118" y="132" fill="#0f2517" font-family="Arial, sans-serif" font-size="58" font-weight="700" opacity=".18">SK BRONKA-DOVHE</text>
+</svg>

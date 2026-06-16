@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Фото тренера Віктора Цогли</title>
+  <desc id="desc">Нейтральний SVG-плейсхолдер для фото тренера.</desc>
+  <rect width="720" height="520" rx="34" fill="#f6f9f4"/>
+  <path d="M0 0h720v165c-83-34-154-36-214-6-86 43-170 41-252-5C180 113 95 116 0 164Z" fill="#eef6ec"/>
+  <circle cx="594" cy="122" r="64" fill="#f8e8eb"/>
+  <circle cx="360" cy="190" r="74" fill="#0d8f44"/>
+  <path d="M218 407c17-82 72-134 142-134s125 52 142 134c-33 27-80 44-142 44s-109-17-142-44Z" fill="#9f182b"/>
+  <path d="M320 338h80" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="360" cy="189" r="98" fill="none" stroke="#ffffff" stroke-width="10" opacity=".72"/>
+</svg>
