@@ -10,6 +10,37 @@ const sections = document.querySelectorAll("main section[id]");
 const brandLink = document.querySelector(".brand");
 const contactsSection = document.querySelector("footer#contacts");
 const newsList = document.getElementById("news-list");
+const preloader = document.getElementById("preloader");
+
+const hidePreloader = () => {
+  if (!preloader) return;
+
+  preloader.classList.add("is-hidden");
+  document.body.classList.remove("is-loading");
+
+  window.setTimeout(() => {
+    preloader.remove();
+  }, 500);
+};
+
+if (preloader) {
+  const startedAt = Date.now();
+  let preloaderDone = false;
+  const completePreloader = () => {
+    if (preloaderDone) return;
+    preloaderDone = true;
+
+    const delay = Math.max(850 - (Date.now() - startedAt), 0);
+    window.setTimeout(hidePreloader, delay);
+  };
+
+  if (document.readyState === "complete") {
+    completePreloader();
+  } else {
+    window.addEventListener("load", completePreloader, { once: true });
+    window.setTimeout(completePreloader, 1400);
+  }
+}
 
 if (year) {
   year.textContent = new Date().getFullYear();

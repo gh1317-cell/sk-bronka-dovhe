@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">Фото тренера Рудольфа Петера</title>
+  <desc id="desc">Нейтральний SVG-плейсхолдер для фото тренера.</desc>
+  <rect width="720" height="520" rx="34" fill="#f4f7f2"/>
+  <circle cx="608" cy="102" r="78" fill="#f8e8eb"/>
+  <path d="M0 376c88-42 165-50 232-24 89 35 176 37 260 4 78-31 154-23 228 25v139H0Z" fill="#ffffff"/>
+  <circle cx="360" cy="190" r="74" fill="#086233"/>
+  <path d="M218 407c17-84 73-136 142-136s125 52 142 136c-32 28-79 45-142 45s-110-17-142-45Z" fill="#9f182b"/>
+  <path d="M304 340h112" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M260 116c36-35 91-55 151-45" fill="none" stroke="#0d8f44" stroke-width="12" stroke-linecap="round" opacity=".28"/>
+</svg>

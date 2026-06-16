@@ -64,8 +64,86 @@ body.menu-open {
   overflow: hidden;
 }
 
+body.is-loading {
+  overflow: hidden;
+}
+
 .page-shell {
   overflow: clip;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7f2 100%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__inner {
+  display: grid;
+  justify-items: center;
+  gap: 1.1rem;
+}
+
+.preloader__inner img {
+  width: clamp(88px, 18vw, 128px);
+  height: auto;
+  filter:
+    drop-shadow(0 0 0.8px rgba(159, 24, 43, 0.95))
+    drop-shadow(0 16px 28px rgba(10, 28, 15, 0.16));
+  animation: preloaderPulse 1.05s ease-in-out infinite;
+}
+
+.preloader__inner span {
+  width: 8.5rem;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(159, 24, 43, 0.12);
+}
+
+.preloader__inner span::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  animation: preloaderLine 0.95s ease-in-out infinite;
+}
+
+@keyframes preloaderPulse {
+  0%,
+  100% {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes preloaderLine {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(230%);
+  }
 }
 
 .section {
@@ -143,6 +221,10 @@ body.menu-open {
   justify-content: space-between;
   gap: 1.5rem;
   min-height: 5.5rem;
+}
+
+.mobile-call {
+  display: none;
 }
 
 .brand {
@@ -384,8 +466,7 @@ body.menu-open {
 }
 
 .history-story,
-.contact-card,
-.schedule-wrap {
+.contact-card {
   padding: 1.6rem;
 }
 
@@ -433,6 +514,21 @@ body.menu-open {
   margin: 0 0 0.4rem;
   font: 700 1.35rem/1 "Oswald", sans-serif;
   letter-spacing: 0.05em;
+}
+
+#history .section-heading p {
+  font-size: clamp(1.1rem, 1.6vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.history-story p {
+  margin: 0;
+  font-size: clamp(1.18rem, 1.6vw, 1.25rem);
+  line-height: 1.72;
+}
+
+.history-story p + p {
+  margin-top: 1rem;
 }
 
 .achievement-grid,
@@ -547,28 +643,66 @@ body.menu-open {
   letter-spacing: 0.08em;
 }
 
-.schedule-wrap {
-  overflow-x: auto;
+.training-locations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 700px;
+.location-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.05rem 1.15rem;
+  background: #fff;
+  border: 1px solid rgba(16, 33, 20, 0.08);
+  border-radius: var(--radius-md);
 }
 
-.schedule-table th,
-.schedule-table td {
-  padding: 1rem 1.1rem;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
+.location-card__icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
 }
 
-.schedule-table th {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.location-card__icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.location-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.training-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1.2rem 1.3rem;
+}
+
+.training-cta p {
+  margin: 0;
   color: var(--muted);
+  font-weight: 700;
+}
+
+.training-cta .button {
+  flex: 0 0 auto;
 }
 
 .contact-card {
@@ -607,7 +741,7 @@ body.menu-open {
 }
 
 .coach-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .coach-grid--cards {
@@ -712,7 +846,7 @@ body.menu-open {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 0.7fr 1fr;
+  grid-template-columns: 1.05fr 0.9fr 0.65fr 1.45fr;
   gap: 1.5rem;
 }
 
@@ -784,12 +918,35 @@ body.menu-open {
   overflow: hidden;
   border-radius: var(--radius-md);
   border: 2px solid #9f182b;
+  background: #f7faf5;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
 }
 
 .map-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: 900 / 620;
+  object-fit: contain;
+}
+
+.map-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.map-locations li {
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .footer__bottom {
@@ -975,72 +1132,13 @@ body.menu-open {
     margin-bottom: 2rem;
   }
 
-  .schedule-wrap {
-    padding: 0;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    overflow: visible;
+  .training-locations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .schedule-table,
-  .schedule-table thead,
-  .schedule-table tbody,
-  .schedule-table tr,
-  .schedule-table th,
-  .schedule-table td {
-    display: block;
-  }
-
-  .schedule-table {
-    min-width: 0;
-  }
-
-  .schedule-table thead {
-    display: none;
-  }
-
-  .schedule-table tbody {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .schedule-table tr {
-    padding: 1.1rem;
-    border-radius: var(--radius-md);
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: var(--card-shadow);
-  }
-
-  .schedule-table td {
-    padding: 0.4rem 0;
-    border-bottom: 0;
-  }
-
-  .schedule-table td::before {
-    display: block;
-    margin-bottom: 0.1rem;
-    color: var(--accent-dark);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .schedule-table td:nth-child(1)::before {
-    content: "Місто";
-  }
-
-  .schedule-table td:nth-child(2)::before {
-    content: "Вікова група";
-  }
-
-  .schedule-table td:nth-child(3)::before {
-    content: "Дні";
-  }
-
-  .schedule-table td:nth-child(4)::before {
-    content: "Час";
+  .training-cta {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .footer {
@@ -1101,7 +1199,30 @@ body.menu-open {
   .header__inner {
     min-height: 4.4rem;
     position: relative;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  .mobile-call {
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    color: var(--accent);
+    background: rgba(248, 232, 235, 0.82);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .mobile-call:hover,
+  .mobile-call:active {
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+  }
+
+  .mobile-call svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: currentColor;
   }
 
   .nav-toggle {
@@ -1165,6 +1286,20 @@ body.menu-open {
   .achievement p,
   .footer p {
     font-size: 0.96rem;
+  }
+
+  #history .section-heading p {
+    font-size: 1.04rem;
+    line-height: 1.62;
+  }
+
+  .history-story p {
+    font-size: 1.04rem;
+    line-height: 1.68;
+  }
+
+  .history-story p + p {
+    margin-top: 0.85rem;
   }
 
   .hero__stats {
@@ -1276,7 +1411,34 @@ body.menu-open {
     font-size: 1.75rem;
   }
 
-  .schedule-table tr {
+  .training-locations {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .location-card {
+    gap: 0.7rem;
+    padding: 0.85rem 0.95rem;
+    border-radius: 18px;
+  }
+
+  .location-card__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .location-card__icon svg {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  .location-card h3 {
+    font-size: 0.96rem;
+  }
+
+  .training-cta {
+    gap: 0.8rem;
+    margin-top: 0.9rem;
     padding: 1rem;
   }
 }

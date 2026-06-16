@@ -1,17 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
-  <rect width="700" height="460" fill="#111c15"/>
-  <path d="M156 108 254 72l98 34 110-18 92 82-20 114-96 74-132 30-116-36-54-112z" fill="#1b8f4c"/>
-  <path d="M198 144 258 126l78 24 92-14 64 54-12 70-64 54-104 24-84-24-38-78z" fill="#d8f1de" opacity=".35"/>
-  <g fill="#fff">
-    <circle cx="240" cy="190" r="8"/>
-    <circle cx="314" cy="236" r="8"/>
-    <circle cx="380" cy="204" r="8"/>
-    <circle cx="442" cy="246" r="8"/>
-    <circle cx="286" cy="292" r="8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Карта локацій тренувань СК Бронька-Довге</title>
+  <desc id="desc">Стилізована карта Закарпаття з позначками локацій тренувань у Вільхівці, Малому Раківці, Імстичові, Великому Раківці, Приборжавському, Довгому, Кушниці, Керецьках і Березниках.</desc>
+  <style>
+    @media (max-width: 520px) {
+      .map-points text {
+        display: none;
+      }
+      .map-title text:first-child {
+        font-size: 26px;
+      }
+      .map-title text:last-child {
+        font-size: 15px;
+      }
+    }
+  </style>
+  <defs>
+    <linearGradient id="land" x1="160" y1="120" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eef6ec"/>
+      <stop offset="1" stop-color="#d9ecd8"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#081b0e" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="620" rx="36" fill="#f7faf5"/>
+  <path d="M94 446c70-76 113-156 153-227 46-82 111-126 199-130 65-3 113 22 161 52 54 33 97 36 145 46 58 12 86 51 76 103-11 61-72 89-123 116-55 30-77 76-125 104-65 38-132 12-192-8-61-20-119 2-178 4-54 2-95-16-116-60Z" fill="url(#land)" stroke="#0d8f44" stroke-width="3" filter="url(#softShadow)"/>
+  <path d="M180 421c64-22 116-25 173-9 61 17 113 18 168-8 68-32 115-87 197-99" fill="none" stroke="#0d8f44" stroke-width="8" stroke-linecap="round" opacity=".16"/>
+  <path d="M240 250c48 23 91 28 132 12 53-20 99-16 143 13 39 26 78 31 126 13" fill="none" stroke="#9f182b" stroke-width="4" stroke-linecap="round" opacity=".18"/>
+  <path d="M122 485c91-19 162-20 235 1 92 27 182 37 287-8" fill="none" stroke="#086233" stroke-width="2" stroke-dasharray="9 11" opacity=".38"/>
+
+  <g class="map-title" fill="#102114" font-family="Manrope, Arial, sans-serif">
+    <text x="68" y="86" font-size="30" font-weight="800">Локації тренувань</text>
+    <text x="68" y="120" font-size="17" fill="#5d6c60">Закарпаття, Іршавщина та навколишні села</text>
   </g>
-  <g fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">
-    <text x="92" y="66">Закарпаття</text>
-    <text x="258" y="186">Ужгород</text>
-    <text x="330" y="286">Мукачево</text>
+
+  <g class="map-points" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="800" fill="#102114">
+    <g transform="translate(300 224)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="-12">Вільхівка</text>
+    </g>
+    <g transform="translate(392 267)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="17" y="5">Малий Раковець</text>
+    </g>
+    <g transform="translate(492 244)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="-10">Імстичово</text>
+    </g>
+    <g transform="translate(442 350)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="-124" y="6">Великий Раковець</text>
+    </g>
+    <g transform="translate(552 333)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="5">Приборжавське</text>
+    </g>
+    <g transform="translate(616 396)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="5">Довге</text>
+    </g>
+    <g transform="translate(690 330)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="5">Кушниця</text>
+    </g>
+    <g transform="translate(590 472)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="-75" y="30">Керецькі</text>
+    </g>
+    <g transform="translate(705 462)">
+      <circle r="12" fill="#fff" stroke="#9f182b" stroke-width="5"/>
+      <circle r="4" fill="#9f182b"/>
+      <text x="18" y="5">Березники</text>
+    </g>
   </g>
 </svg>
