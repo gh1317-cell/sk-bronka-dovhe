@@ -1,7 +1,7 @@
 ---
-title: "Фестиваль футболу у Вишкові🏆"
-date: "2026-05-07"
-image: "/images/news-3.jpg"
-category: "Події"
+title: Фестиваль футболу у Вишкові🏆
+date: 2026-06-22
+category: Події
+image: /images/uploads/camphoto_341603450.jpeg
 ---
 СК Бронька-Довге 2017 👏
